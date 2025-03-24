@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faiz Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            font-size: 48px;
+            color: #4285f4; /* Warna biru Google */
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #4285f4; /* Warna biru Google saat fokus */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 24px;
+            background-color: #4285f4; /* Warna biru Google */
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ae8; /* Warna biru lebih gelap saat hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Faiz</h1>
+    <input type="text" id="search-input" placeholder="Cari di Faiz...">
+    <button onclick="performSearch()">Cari</button>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById('search-input').value;
+            if (query) {
+                // Mengarahkan ke Google Search dengan query yang dimasukkan
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            } else {
+                alert("Silakan masukkan kata kunci pencarian.");
+            }
+        }
+    </script>
+</body>
+</html>
